@@ -354,19 +354,17 @@
             overflow: hidden;
         }
 
-        .project-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+      .project-image img {
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(0, 255, 136, 0.2), transparent);
-            transition: left 0.8s ease;
+            object-fit: cover;
+            object-position: top; /* Wichtig für Screenshots */
+            border-radius: 10px 10px 0 0; /* Abgerundete Ecken oben */
         }
 
-        .project-card:hover .project-image::before {
-            left: 100%;
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+            filter: brightness(1.1);
         }
 
         .project-content {
@@ -852,7 +850,9 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image">🔬</div>
+                <div class="project-image">
+                    <img src="images/react-simulation.jpg" alt="Doppelpendel-Simulation" loading="lazy">
+                </div>
                 <div class="project-content">
                     <h3 class="project-title">Doppelpendel-Simulation</h3>
                     <p class="project-description">
@@ -867,7 +867,9 @@
             </div>
 
             <div class="project-card">
-                <div class="project-image">🏢</div>
+                <div class="project-image">
+                    <img src="images/rentenversicherung.jpg" alt="DRV Projekt" loading="lazy">
+                </div>
                 <div class="project-content">
                     <h3 class="project-title">Rentenversicherungs-Projekt</h3>
                     <p class="project-description">
