@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sarah Vogel — integration & automation platforms</title>
-  <meta name="description" content="I build the integration layer between the tools small businesses already use and the automation on top of it. Two platforms are public with live demos.">
+  <meta name="description" content="I build the integration layer between the tools small businesses already use and the automation on top of it. Three tools are public with live demos.">
   <meta property="og:title" content="Sarah Vogel — integration & automation platforms">
-  <meta property="og:description" content="Two working platforms with live demos: birdie (solar back office) and botworks (AI bot runtime).">
+  <meta property="og:description" content="Three working tools with live demos: birdie (solar back office), botworks (AI bot runtime) and commission-engine (sales commissions).">
   <meta property="og:image" content="https://godsmasher.github.io/my-portfolio/assets/birdie-poster.jpg">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231a1a1a'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='18' font-weight='700' fill='%23fff' text-anchor='middle'%3ESV%3C/text%3E%3C/svg%3E">
   <style>
@@ -101,7 +101,7 @@
     <div class="intro" id="top">
       <p class="kicker" data-i18n="intro.kicker">Integration & automation platforms · Leipzig, remote</p>
       <h1 data-i18n="intro.h1">I connect the tools small businesses already use and put the automation on top.</h1>
-      <p data-i18n="intro.p">CRMs, accounting, shared mailboxes, industry portals — most of the work in a back office is copying data between them. I build the layer in between: connectors, bots and one clear view. Two of those platforms are public, with demos you can click through without an account.</p>
+      <p data-i18n="intro.p">CRMs, accounting, shared mailboxes, industry portals — most of the work in a back office is copying data between them. I build the layer in between: connectors, bots and one clear view. Three of those tools are public, with demos you can click through without an account.</p>
     </div>
 
     <section id="projects">
@@ -162,6 +162,33 @@
           <figcaption data-i18n="botworks.cap">Platform dashboard, bot fleet, connectors, route bot, German switch, analytics — recorded from the hosted demo.</figcaption>
         </figure>
       </article>
+
+      <article class="project">
+        <div>
+          <h3>commission-engine</h3>
+          <p class="tag" data-i18n="ce.tag">Sales commissions with tiers, team pools and monthly statements</p>
+          <p data-i18n="ce.problem">Commission rules are never “x % of the price”: they run on margin, discounts cost the seller more than their face value, rates depend on tiers, team leads take the rest of a pool, partner teams settle themselves, salaried staff get a different formula — and it all lives in a spreadsheet one person understands. I rebuilt the logic of a production tool as one tested engine.</p>
+          <ul>
+            <li data-i18n="ce.b1">Pure TypeScript engine: commission base, tier and override rates, pool split, partner-team settlement, salaried rates, own-lead bonuses, clawbacks — every constant is configuration, every edge case a test</li>
+            <li data-i18n="ce.b2">Payout lifecycle: open → payable when the customer paid → paid, monthly statements per recipient, negative clawback entries instead of deleted history</li>
+            <li data-i18n="ce.b3">Role-based demo app with a live calculation preview and a line-by-line breakdown, so a rep can verify their number</li>
+          </ul>
+          <p class="stack">TypeScript · Next.js · Tailwind CSS · vitest · GitHub Actions</p>
+        </div>
+        <div>
+          <div class="links">
+            <a class="btn primary" href="https://commission-engine-beta.vercel.app" data-i18n="btn.demo">Live demo</a>
+            <a class="btn" href="https://github.com/GodSmasher/commission-engine" data-i18n="btn.code">Code &amp; README</a>
+          </div>
+        </div>
+        <figure>
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/commission-poster.jpg" aria-label="commission-engine demo walkthrough">
+            <source src="assets/commission.webm" type="video/webm">
+            <source src="assets/commission.mp4" type="video/mp4">
+          </video>
+          <figcaption data-i18n="ce.cap">Overview, deals, new deal with live preview, approvals, payout run, statements, German switch — recorded from the hosted demo.</figcaption>
+        </figure>
+      </article>
     </section>
 
     <section id="how">
@@ -169,7 +196,7 @@
       <div class="grid3">
         <div>
           <h4 data-i18n="how.1h">Runs before it’s wired up</h4>
-          <p data-i18n="how.1p">Both platforms start with two commands and no credentials. Mock transports and offline answers go through the real parsing code, so what you see in the demo is what ships.</p>
+          <p data-i18n="how.1p">All three start with two commands and no credentials. Mock transports and offline answers go through the real parsing code, so what you see in the demo is what ships.</p>
         </div>
         <div>
           <h4 data-i18n="how.2h">Tested, in CI, documented</h4>
@@ -202,7 +229,7 @@
       'nav.projects': 'Projekte', 'nav.how': 'Arbeitsweise', 'nav.contact': 'Kontakt',
       'intro.kicker': 'Integration & Automatisierung · Leipzig, remote',
       'intro.h1': 'Ich verbinde die Tools, die kleine Unternehmen schon nutzen, und setze die Automatisierung obendrauf.',
-      'intro.p': 'CRM, Buchhaltung, Sammelpostfächer, Branchenportale: Der größte Teil der Arbeit im Backoffice ist Daten zwischen ihnen zu kopieren. Ich baue die Schicht dazwischen: Connectoren, Bots und eine klare Übersicht. Zwei dieser Plattformen sind öffentlich, mit Demos, die ohne Account funktionieren.',
+      'intro.p': 'CRM, Buchhaltung, Sammelpostfächer, Branchenportale: Der größte Teil der Arbeit im Backoffice ist Daten zwischen ihnen zu kopieren. Ich baue die Schicht dazwischen: Connectoren, Bots und eine klare Übersicht. Drei dieser Tools sind öffentlich, mit Demos, die ohne Account funktionieren.',
       'projects.h2': 'Projekte',
       'birdie.tag': 'Die Transparenzschicht für Solarinstallateure',
       'birdie.problem': 'Ein Solarinstallateur arbeitet mit CRM, Buchhaltung, Postfächern, Kalender und Dutzenden Netzbetreiber-Portalen mit eigenen Logins und PDF-Formularen. Nichts davon spricht miteinander, und Netzanschlüsse stocken, weil die Rückfrage des Netzbetreibers ungelesen im Sammelpostfach liegt.',
@@ -216,10 +243,16 @@
       'botworks.b3': 'Jeder KI-Aufruf hat eine deterministische Offline-Antwort, die trotzdem das echte Antwortschema des Bots besteht; die Queue fällt ohne Redis auf den Speicher zurück',
       'birdie.cap': 'Dashboard, Pipeline, Netzanmeldung, Einsatzplanung, Sprachwechsel, Workflows, aufgenommen aus der gehosteten Demo.',
       'botworks.cap': 'Plattform-Dashboard, Bot-Flotte, Connectoren, Route-Bot, Sprachwechsel, Analytics, aufgenommen aus der gehosteten Demo.',
+      'ce.tag': 'Vertriebsprovisionen mit Stufen, Team-Pools und Monatsabrechnungen',
+      'ce.problem': 'Provisionsregeln sind nie „x % vom Preis“: Sie laufen über die Marge, Rabatte kosten den Verkäufer mehr als ihren Nennwert, Sätze hängen von Stufen ab, Teamleitungen bekommen den Rest eines Pools, Partnerteams rechnen selbst ab, Angestellte haben eine andere Formel. Und alles steckt in einer Tabelle, die eine Person versteht. Ich habe die Logik eines produktiven Tools als eine getestete Engine neu gebaut.',
+      'ce.b1': 'Reine TypeScript-Engine: Provisionsbasis, Stufen- und Override-Sätze, Pool-Aufteilung, Partnerteam-Abrechnung, Angestellten-Sätze, Eigenlead-Boni, Rückforderungen. Jede Konstante ist Konfiguration, jeder Sonderfall ein Test',
+      'ce.b2': 'Auszahlungszyklus: offen → auszahlbar nach Kundenzahlung → ausgezahlt, Monatsabrechnungen je Empfänger, negative Rückforderungsbuchungen statt gelöschter Historie',
+      'ce.b3': 'Rollenbasierte Demo-App mit Live-Vorschau der Berechnung und Aufschlüsselung Zeile für Zeile, damit ein Verkäufer seine Zahl nachprüfen kann',
+      'ce.cap': 'Übersicht, Deals, neuer Deal mit Live-Vorschau, Freigaben, Auszahlungslauf, Abrechnungen, Sprachwechsel, aufgenommen aus der gehosteten Demo.',
       'btn.demo': 'Live-Demo', 'btn.code': 'Code & README', 'btn.design': 'UI-Konzept (Figma)',
       'how.h2': 'Arbeitsweise',
       'how.1h': 'Läuft, bevor es verkabelt ist',
-      'how.1p': 'Beide Plattformen starten mit zwei Befehlen und ohne Zugangsdaten. Mock-Transporte und Offline-Antworten laufen durch den echten Parsing-Code, also zeigt die Demo das, was ausgeliefert wird.',
+      'how.1p': 'Alle drei starten mit zwei Befehlen und ohne Zugangsdaten. Mock-Transporte und Offline-Antworten laufen durch den echten Parsing-Code, also zeigt die Demo das, was ausgeliefert wird.',
       'how.2h': 'Getestet, in CI, dokumentiert',
       'how.2p': 'Vitest-Suiten, GitHub Actions bei jedem Push, READMEs, die Problem und Architektur erklären statt nur Befehle. Beim Schreiben der Tests kam ein echter API-Bug ans Licht, genau dafür sind sie da.',
       'how.3h': 'Automatisierung mit Mensch in der Schleife',
